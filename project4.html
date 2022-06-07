@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Project 4: 2D Ferris Wheel</title>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+#version 300 es
+
+in vec4 aPosition;
+
+void
+main()
+{
+
+    gl_Position = aPosition;
+
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+#version 300 es
+precision mediump float;
+
+out vec4 fColor;
+
+void
+main()
+{
+    fColor = vec4( 0.5, 0.0, 1.0, 1.0 );
+}
+</script>
+
+<script type="text/javascript" src="./Common/initShaders.js"></script>
+<script type="text/javascript" src="./Common/MVnew.js"></script>
+<script type="text/javascript" src="project4.js"></script>
+</head>
+
+<body>
+<div>
+cart number: 1 <input id="slider" type="range"
+min="1" max="10" step="1" value="1" />
+10
+</div>
+
+<div>
+spin speed: faster <input id="slider2" type="range"
+min="0" max="50" step="10" value="25" />
+slower
+</div>
+
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>
